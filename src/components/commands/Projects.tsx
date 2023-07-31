@@ -13,8 +13,13 @@ import {
 import { termContext } from "../Terminal";
 import Usage from "../Usage";
 
-const Projects: React.FC = () => {
+type ProjectsProps = {
+  isLastCommand: boolean;
+};
+
+const Projects: React.FC<ProjectsProps> = () => {
   const { arg, history, rerender } = useContext(termContext);
+  //console.log(isLastCommand)
 
   /* ===== get current command ===== */
   const currentCommand = getCurrentCmdArry(history);
@@ -23,10 +28,13 @@ const Projects: React.FC = () => {
   useEffect(() => {
     if (checkRedirect(rerender, currentCommand, "projects")) {
       projects.forEach(({ id, url }) => {
-        id === parseInt(arg[1]) && window.open(url, "_blank");
+        if (id === parseInt(arg[1])) {
+          console.log(id, url);
+          window.open(url, "_blank");
+        }
       });
     }
-  }, [arg, rerender, currentCommand]);
+  }, [currentCommand, rerender, arg]);
 
   /* ===== check arg is valid ===== */
   const checkArg = () =>
@@ -39,8 +47,7 @@ const Projects: React.FC = () => {
   ) : (
     <div data-testid="projects">
       <ProjectsIntro>
-        “Talk is cheap. Show me the code”? I got you. <br />
-        Here are some of my projects you shouldn't misss
+        Below you can find some of the projects that I've coded.
       </ProjectsIntro>
       {projects.map(({ id, title, desc }) => (
         <ProjectContainer key={id}>
@@ -56,9 +63,9 @@ const Projects: React.FC = () => {
 const projects = [
   {
     id: 1,
-    title: "Sat Naing's Blog",
-    desc: "My personal blog where I can write down my thoughts and experiences.",
-    url: "https://satnaing.dev/blog/",
+    title: "Satellite visualization",
+    desc: "A website that visualizes the satellites orbiting the Earth, done as a project for Data Visualization course at EPFL",
+    url: "https://com-480-data-visualization.github.io/project-2023-astro-vizards/",
   },
   {
     id: 2,

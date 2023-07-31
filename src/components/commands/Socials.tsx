@@ -52,25 +52,25 @@ const socials = [
   {
     id: 1,
     title: "GitHub",
-    url: "https://github.com/satnaing",
+    url: "https://github.com/aybarsyazici",
     tab: 3,
   },
   {
     id: 2,
-    title: "Dev.to",
-    url: "https://dev.to/satnaing",
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/aybars-yaz%C4%B1c%C4%B1-9129b1193/",
     tab: 3,
   },
   {
     id: 3,
-    title: "Facebook",
-    url: "https://www.facebook.com/satnaing.dev",
+    title: "Email",
+    url: "aybarsyazici@gmail.com",
     tab: 1,
   },
   {
     id: 4,
-    title: "Instagram",
-    url: "https://instagram.com/satnaing.dev",
+    title: "Discord",
+    url: "@yoshiane",
     tab: 0,
   },
 ];

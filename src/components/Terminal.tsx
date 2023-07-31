@@ -27,19 +27,19 @@ type Command = {
 }[];
 
 export const commands: Command = [
-  { cmd: "about", desc: "about Sat Naing", tab: 8 },
+  { cmd: "about", desc: "about Aybars Yazici", tab: 8 },
   { cmd: "clear", desc: "clear the terminal", tab: 8 },
   { cmd: "echo", desc: "print out anything", tab: 9 },
   { cmd: "education", desc: "my education background", tab: 4 },
   { cmd: "email", desc: "send an email to me", tab: 8 },
-  { cmd: "gui", desc: "go to my portfolio in GUI", tab: 10 },
+  //{ cmd: "gui", desc: "go to my portfolio in GUI", tab: 10 },
   { cmd: "help", desc: "check available commands", tab: 9 },
   { cmd: "history", desc: "view command history", tab: 6 },
   { cmd: "projects", desc: "view projects that I've coded", tab: 5 },
   { cmd: "pwd", desc: "print current working directory", tab: 10 },
   { cmd: "socials", desc: "check out my social accounts", tab: 6 },
   { cmd: "themes", desc: "check available themes", tab: 7 },
-  { cmd: "welcome", desc: "display hero section", tab: 6 },
+  { cmd: "welcome", desc: "display the welcome message", tab: 6 },
   { cmd: "whoami", desc: "about current user", tab: 7 },
 ];
 
@@ -209,6 +209,7 @@ const Terminal = () => {
       </Form>
 
       {cmdHistory.map((cmdH, index) => {
+        //console.log(cmdH,index);
         const commandArray = _.split(_.trim(cmdH), " ");
         const validCommand = _.find(commands, { cmd: commandArray[0] });
         const contextValue = {
@@ -228,7 +229,11 @@ const Terminal = () => {
             </div>
             {validCommand ? (
               <termContext.Provider value={contextValue}>
-                <Output index={index} cmd={commandArray[0]} />
+                <Output
+                  index={index}
+                  cmd={commandArray[0]}
+                  historyLength={cmdHistory.length}
+                />
               </termContext.Provider>
             ) : cmdH === "" ? (
               <Empty />
