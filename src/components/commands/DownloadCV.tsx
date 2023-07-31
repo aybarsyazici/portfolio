@@ -29,7 +29,7 @@ const DownloadCV = () => {
     }
   }, [arg, currentCommand, rerender]);
 
-  return <GeneralOutput>Downloaded!</GeneralOutput>;
+  return <GeneralOutput>Downloaded!!</GeneralOutput>;
 };
 
 export default DownloadCV;
