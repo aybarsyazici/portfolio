@@ -47,21 +47,21 @@ describe("Terminal Component", () => {
       );
     });
 
-    it("should return 'visitor' when user type 'whoami' cmd", async () => {
+    it("should return 'visitor' when user types 'whoami' cmd", async () => {
       await user.type(terminalInput, "whoami{enter}");
       expect(screen.getByTestId("latest-output").firstChild?.textContent).toBe(
         "visitor"
       );
     });
 
-    it("should return '/home/satnaing' when user type 'pwd' cmd", async () => {
+    it("should return '/home/satnaing' when user types 'pwd' cmd", async () => {
       await user.type(terminalInput, "pwd{enter}");
       expect(screen.getByTestId("latest-output").firstChild?.textContent).toBe(
-        "/home/satnaing"
+        "/home/aybarsyazici"
       );
     });
 
-    it("should display cmd history when user type 'history' cmd", async () => {
+    it("should display cmd history when user types 'history' cmd", async () => {
       await user.type(terminalInput, "whoami{enter}");
       await user.type(terminalInput, "history{enter}");
 
@@ -78,19 +78,19 @@ describe("Terminal Component", () => {
       expect(typedCommands).toEqual(["welcome", "whoami", "history"]);
     });
 
-    it("should clear everything when user type 'clear' cmd", async () => {
+    it("should clear everything when user types 'clear' cmd", async () => {
       await user.type(terminalInput, "clear{enter}");
       expect(screen.getByTestId("terminal-wrapper").children.length).toBe(1);
     });
 
-    it("should return `hello world` when user type `echo hello world` cmd", async () => {
+    it("should return `hello world` when user types `echo hello world` cmd", async () => {
       await user.type(terminalInput, "echo hello world{enter}");
       expect(screen.getByTestId("latest-output").firstChild?.textContent).toBe(
         "hello world"
       );
     });
 
-    it("should return `hello world` without quotes when user type `echo 'hello world'` cmd", async () => {
+    it("should return `hello world` without quotes when user types `echo 'hello world'` cmd", async () => {
       // omit single quotes
       await user.type(terminalInput, "echo 'hello world'{enter}");
       expect(screen.getByTestId("latest-output").firstChild?.textContent).toBe(
@@ -110,7 +110,7 @@ describe("Terminal Component", () => {
       );
     });
 
-    it("should render Welcome component when user type 'welcome' cmd", async () => {
+    it("should render Welcome component when user types 'welcome' cmd", async () => {
       await user.type(terminalInput, "clear{enter}");
       await user.type(terminalInput, "welcome{enter}");
       expect(screen.getByTestId("welcome")).toBeInTheDocument();
@@ -126,7 +126,7 @@ describe("Terminal Component", () => {
       "themes",
     ];
     otherCmds.forEach(cmd => {
-      it(`should render ${cmd} component when user type '${cmd}' cmd`, async () => {
+      it(`should render ${cmd} component when user types '${cmd}' cmd`, async () => {
         await user.type(terminalInput, `${cmd}{enter}`);
         expect(screen.getByTestId(`${cmd}`)).toBeInTheDocument();
       });
@@ -138,7 +138,7 @@ describe("Terminal Component", () => {
       window.open = vi.fn();
     });
 
-    it("should open mail app when user type 'email' cmd", async () => {
+    it("should open mail app when user types 'email' cmd", async () => {
       await user.type(terminalInput, "email{enter}");
       expect(window.open).toHaveBeenCalled();
       expect(screen.getByTestId("latest-output").firstChild?.textContent).toBe(
@@ -148,14 +148,14 @@ describe("Terminal Component", () => {
 
     const nums = [1, 2, 3, 4];
     nums.forEach(num => {
-      it(`should redirect to project URL when user type 'projects go ${num}' cmd`, async () => {
+      it(`should redirect to project URL when user types 'projects go ${num}' cmd`, async () => {
         await user.type(terminalInput, `projects go ${num}{enter}`);
         expect(window.open).toHaveBeenCalled();
       });
     });
 
     nums.forEach(num => {
-      it(`should redirect to social media when user type 'socials go ${num}' cmd`, async () => {
+      it(`should redirect to social media when user types 'socials go ${num}' cmd`, async () => {
         await user.type(terminalInput, `socials go ${num}{enter}`);
         expect(window.open).toHaveBeenCalled();
       });

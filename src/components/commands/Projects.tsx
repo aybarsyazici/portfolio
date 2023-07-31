@@ -69,21 +69,33 @@ const projects = [
   },
   {
     id: 2,
-    title: "Haru Fashion",
-    desc: "An ecommerce web application where users can browse various products and make purchases.",
-    url: "https://haru-fashion.vercel.app/",
+    title: "Time series student performance prediction",
+    desc: `I along with 2 other team members, worked with data provided by a 
+    start up (lernnavi), to come up with, train and test several 
+    machine learning algorithms to cluster students using the platform into
+    groups and try to predict their performances of week N, using the data available from weeks 1...N-1. Conducted as a course project for
+    ML for behavioral data at EPFL`,
+    url: "https://github.com/ML4BD/final-submission-uclumasa",
   },
   {
     id: 3,
-    title: "Haru API",
-    desc: "A RESTful API developed for the Haru fashion ecommerce project.",
-    url: "https://satnaing.github.io/haru-api/",
+    title:
+      "Brain Fingerprinting and Task Decoding via Graph Structure Learning",
+    desc: `A project that aims to
+    investigate the use of graph structure learning (GSL) methods
+    to construct alternative graphs to so
+    called functional connectivity (FC) graphs where a brain graph is derived based on pairwise
+    functional correlation between activity in brain regions. Conducted as a course project for ML course at EPFL
+    under the supervision of Medical Image processing Lab.`,
+    url: "https://drive.google.com/file/d/1sqEazi1b93ltYfkUFU4iQcDDFkNtxzZX/view?usp=sharing",
   },
   {
     id: 4,
-    title: "AstroPaper Blog Theme",
-    desc: "A minimal, accessible and SEO-friendly Astro blog theme.",
-    url: "https://astro-paper.pages.dev/",
+    title: "E-commerce website design",
+    desc: `As the software team lead, with a group of 7, used agile development, 
+    to design and develop an E-Commerce website as a course project. 
+    Utilized Java (JPA, JDBC, JAXRS), Javascript(JQuery), JSP and Wildfly 18.0.1.`,
+    url: "https://github.com/aybarsyazici/Web-Store-Project",
   },
 ];
 

@@ -63,3 +63,12 @@ export const Link = styled.a`
     border-bottom-style: solid;
   }
 `;
+
+export const Quote = styled.p`
+  color: ${({ theme }) => theme.colors?.secondary};
+  text-decoration: none;
+  line-height: 1.5rem;
+  white-space: nowrap;
+  font-style: italic;
+  opacity: 0.4;
+`;

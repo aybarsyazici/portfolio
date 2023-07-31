@@ -13,6 +13,7 @@ import Themes from "./commands/Themes";
 import { OutputContainer, UsageDiv } from "./styles/Output.styled";
 import { termContext } from "./Terminal";
 import { useContext } from "react";
+import WorkHistory from "./commands/WorkHistory";
 
 type Props = {
   index: number;
@@ -38,11 +39,12 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           clear: <Clear />,
           echo: <Echo />,
           education: <Education />,
+          work: <WorkHistory />,
           email: <Email />,
           help: <Help />,
           history: <History />,
           projects: <Projects isLastCommand={index === 0} />,
-          pwd: <GeneralOutput>/home/satnaing</GeneralOutput>,
+          pwd: <GeneralOutput>/home/aybarsyazici</GeneralOutput>,
           socials: <Socials />,
           themes: <Themes />,
           welcome: <Welcome />,

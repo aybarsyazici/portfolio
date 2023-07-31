@@ -1,2 +1,4 @@
 pnpm-lock.yaml
-/build/index.html
+/build/*
+index.html
+/public/*

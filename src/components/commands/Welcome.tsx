@@ -4,6 +4,7 @@ import {
   PreName,
   PreNameMobile,
   PreWrapper,
+  Quote,
   Seperator,
 } from "../styles/Welcome.styled";
 
@@ -36,6 +37,12 @@ _|      _|    _|_|    _|_|_|_|_|  _|_|_|    _|_|_|  _|_|_|
 
         <div>
           For a list of available commands, type `<Cmd>help</Cmd>`.
+        </div>
+        <div>
+          <Quote>
+            "One day, in retrospect, the years of struggle will strike you as
+            the most beautiful." <br /> - Sigmund Freud.
+          </Quote>
         </div>
       </div>
       {/* <div className="illu-section">
