@@ -46,7 +46,7 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           history: <History />,
           projects: <Projects isLastCommand={index === 0} />,
           pwd: <GeneralOutput>/home/aybarsyazici</GeneralOutput>,
-          socials: <Socials />,
+          socials: <Socials isLastCommand={index === 0} />,
           themes: <Themes />,
           welcome: <Welcome />,
           whoami: <GeneralOutput>visitor</GeneralOutput>,

@@ -17,7 +17,7 @@ type ProjectsProps = {
   isLastCommand: boolean;
 };
 
-const Projects: React.FC<ProjectsProps> = () => {
+const Projects: React.FC<ProjectsProps> = ({ isLastCommand = false }) => {
   const { arg, history, rerender } = useContext(termContext);
   //console.log(isLastCommand)
 
@@ -26,6 +26,7 @@ const Projects: React.FC<ProjectsProps> = () => {
 
   /* ===== check current command is redirect ===== */
   useEffect(() => {
+    if (!isLastCommand) return;
     if (checkRedirect(rerender, currentCommand, "projects")) {
       projects.forEach(({ id, url }) => {
         if (id === parseInt(arg[1])) {
@@ -34,7 +35,10 @@ const Projects: React.FC<ProjectsProps> = () => {
         }
       });
     }
-  }, [currentCommand, rerender, arg]);
+    return () => {
+      isLastCommand = false;
+    };
+  }, [currentCommand, rerender, arg, isLastCommand]);
 
   /* ===== check arg is valid ===== */
   const checkArg = () =>
@@ -79,8 +83,7 @@ const projects = [
   },
   {
     id: 3,
-    title:
-      "Brain Fingerprinting and Task Decoding via Graph Structure Learning",
+    title: "Brain Fingerprinting via Graph Structure Learning",
     desc: `A project that aims to
     investigate the use of graph structure learning (GSL) methods
     to construct alternative graphs to so

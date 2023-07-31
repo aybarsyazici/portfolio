@@ -10,7 +10,11 @@ import {
 import { termContext } from "../Terminal";
 import Usage from "../Usage";
 
-const Socials: React.FC = () => {
+type SocialsProps = {
+  isLastCommand: boolean;
+};
+
+const Socials: React.FC<SocialsProps> = ({ isLastCommand = false }) => {
   const { arg, history, rerender } = useContext(termContext);
 
   /* ===== get current command ===== */
@@ -18,12 +22,23 @@ const Socials: React.FC = () => {
 
   /* ===== check current command makes redirect ===== */
   useEffect(() => {
+    if (!isLastCommand) return;
     if (checkRedirect(rerender, currentCommand, "socials")) {
       socials.forEach(({ id, url }) => {
-        id === parseInt(arg[1]) && window.open(url, "_blank");
+        if (id === parseInt(arg[1])) {
+          url === "@yoshiane"
+            ? window.open(
+                "https://discord.com/users/118399445804122116",
+                "_blank"
+              )
+            : window.open(url, "_blank");
+        }
       });
     }
-  }, [arg, rerender, currentCommand]);
+    return () => {
+      isLastCommand = false;
+    };
+  }, [arg, rerender, currentCommand, isLastCommand]);
 
   /* ===== check arg is valid ===== */
   const checkArg = () =>
@@ -59,19 +74,19 @@ const socials = [
     id: 2,
     title: "LinkedIn",
     url: "https://www.linkedin.com/in/aybars-yaz%C4%B1c%C4%B1-9129b1193/",
-    tab: 3,
+    tab: 1,
   },
   {
     id: 3,
-    title: "Email",
-    url: "aybarsyazici@gmail.com",
-    tab: 1,
+    title: "Steam",
+    url: "https://steamcommunity.com/id/yoshiane",
+    tab: 4,
   },
   {
     id: 4,
     title: "Discord",
     url: "@yoshiane",
-    tab: 0,
+    tab: 2,
   },
 ];
 
