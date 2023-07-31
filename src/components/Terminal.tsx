@@ -42,6 +42,7 @@ export const commands: Command = [
   { cmd: "welcome", desc: "display the welcome message", tab: 6 },
   { cmd: "whoami", desc: "about current user", tab: 7 },
   { cmd: "work", desc: "display the work history", tab: 9 },
+  { cmd: "cv", desc: "download my cv!", tab: 11 },
 ];
 
 type Term = {

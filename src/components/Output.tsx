@@ -14,6 +14,7 @@ import { OutputContainer, UsageDiv } from "./styles/Output.styled";
 import { termContext } from "./Terminal";
 import { useContext } from "react";
 import WorkHistory from "./commands/WorkHistory";
+import DownloadCV from "./commands/DownloadCV";
 
 type Props = {
   index: number;
@@ -49,6 +50,7 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           themes: <Themes />,
           welcome: <Welcome />,
           whoami: <GeneralOutput>visitor</GeneralOutput>,
+          cv: <DownloadCV />,
         }[cmd]
       }
     </OutputContainer>
