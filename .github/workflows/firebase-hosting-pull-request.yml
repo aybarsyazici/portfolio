@@ -21,6 +21,8 @@ jobs:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_AYBARS_YAZICI }}"
           projectId: aybars-yazici
+          channelId: preview # Add the channelId for preview deployments
+          expires: 7d
 
   deploy_on_push:
     if: github.ref == 'refs/heads/main'
@@ -33,3 +35,4 @@ jobs:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_AYBARS_YAZICI }}"
           projectId: aybars-yazici
+          # No channelId needed here since this is the production deploy
