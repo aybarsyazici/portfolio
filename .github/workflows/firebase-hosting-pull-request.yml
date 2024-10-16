@@ -35,4 +35,4 @@ jobs:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_AYBARS_YAZICI }}"
           projectId: aybars-yazici
-          # No channelId needed here since this is the production deploy
+          channelId: live
