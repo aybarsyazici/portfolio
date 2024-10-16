@@ -76,18 +76,18 @@ const socials = [
     url: "https://www.linkedin.com/in/aybars-yaz%C4%B1c%C4%B1-9129b1193/",
     tab: 1,
   },
-  {
-    id: 3,
-    title: "Steam",
-    url: "https://steamcommunity.com/id/yoshiane",
-    tab: 4,
-  },
-  {
-    id: 4,
-    title: "Discord",
-    url: "@yoshiane",
-    tab: 2,
-  },
+  // {
+  //   id: 3,
+  //   title: "Steam",
+  //   url: "https://steamcommunity.com/id/yoshiane",
+  //   tab: 4,
+  // },
+  // {
+  //   id: 4,
+  //   title: "Discord",
+  //   url: "@yoshiane",
+  //   tab: 2,
+  // },
 ];
 
 export default Socials;

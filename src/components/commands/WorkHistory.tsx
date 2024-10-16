@@ -38,6 +38,31 @@ type workList = {
 
 const workBg: workList[] = [
   {
+    title: "Machine Learning Engineer @ Visium. (02/2024 - 08/2024)",
+    desc: `
+      Worked as a Junior ML Engineer to create AI models to suit client needs.
+      Utilized PyTorch, DVC, Docker along with Google Cloud(Cloud run apps, Firestore DB) for the
+      backend of the ML pipeline and Firebase, ReactJS for the frontend.
+      Some implemented/worked on concepts:`,
+    list: [
+      "Implicit Deep Learning Recommender systems.",
+      "Document line item OCR + classification",
+      "Retrieval Augmented Generation",
+    ],
+    ordered: false,
+  },
+  {
+    title: "Graduate teaching assistant @ EPFL (09/2023 - 02/2025)",
+    desc: `Worked as a graduate level teaching assistant(Assistant étudiant) for Machine Learning(CS-433)[09/2023-01/2024] and
+    TCP/IP(COM-407)[09/2024-01/2025] course at EPFL.`,
+    list: [
+      "Prepared weekly exercises.",
+      "Organized and graded projects.",
+      "Helped students during exercise sessions",
+    ],
+    ordered: false,
+  },
+  {
     title: "Software Developer @ EVET Tech. (12/2021 - 06/2022)",
     desc: `
     Worked primarily as a .NET Developer. Utilized ASP.NET framework along with MVC structure to:`,
@@ -65,14 +90,14 @@ const workBg: workList[] = [
     `,
   },
   {
-    title: "Software developer @ P.I Works ( 06/2020 - 09/2020 )",
+    title: "Software developer @ P.I Works (06/2020 - 09/2020)",
     desc: `
     Summer Internship`,
     list: [
-      "Worked on projects involving both telecommunications layer and software layer.",
-      "Learned about database management, audio streaming, how to evaluate the performance of a wireless network and how to improve on it.",
-      "Learned about the commonly faced problems of telecommunication systems and their solutions.",
-      "Reviewed and analyzed performance of wireless communication systems.",
+      "Worked on projects involving both the telecommunications layer and software layer.",
+      "Focused on database management, audio streaming, evaluating wireless network \
+      performance, and identifying ways to improve upon it.",
+      "Gained insight into the common issues faced by telecommunication systems and their solutions.",
     ],
   },
 ];

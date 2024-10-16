@@ -146,15 +146,14 @@ describe("Terminal Component", () => {
       );
     });
 
-    const nums = [1, 2, 3, 4];
-    nums.forEach(num => {
+    [1, 3, 4, 5].forEach(num => {
       it(`should redirect to project URL when user types 'projects go ${num}' cmd`, async () => {
         await user.type(terminalInput, `projects go ${num}{enter}`);
         expect(window.open).toHaveBeenCalled();
       });
     });
 
-    nums.forEach(num => {
+    [1, 2].forEach(num => {
       it(`should redirect to social media when user types 'socials go ${num}' cmd`, async () => {
         await user.type(terminalInput, `socials go ${num}{enter}`);
         expect(window.open).toHaveBeenCalled();
@@ -194,8 +193,8 @@ describe("Terminal Component", () => {
         window.open = vi.fn();
 
         // firstly run commands correct options
-        await user.type(terminalInput, `projects go 4{enter}`);
-        await user.type(terminalInput, `socials go 4{enter}`);
+        await user.type(terminalInput, `projects go 1{enter}`);
+        await user.type(terminalInput, `socials go 1{enter}`);
         await user.type(terminalInput, `themes set espresso{enter}`);
 
         // then run cmd with incorrect options

@@ -15,8 +15,14 @@ const About: React.FC = () => {
         .
       </p>
       <p>
-        My interests are web development, machine learning, and distributed
-        systems. I have mostly worked as a full-stack developer.
+        My interests include <HighlightAlt>Machine Learning</HighlightAlt>, with
+        a focus on applied ML for solving real-world problems, along with
+        <HighlightAlt>Information Systems</HighlightAlt> (such as Information
+        Retrieval, Recommender Systems, and Text Summarization, Knowledge
+        Graphs, Ontologies...), as well as <HighlightAlt>NLP</HighlightAlt>. I
+        enjoy working on projects that blend these areas. For examples on
+        projects like that, check out my <HighlightAlt>Projects</HighlightAlt>{" "}
+        page.
       </p>
     </AboutWrapper>
   );
