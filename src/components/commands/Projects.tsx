@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import {
   checkRedirect,
   getCurrentCmdArry,
@@ -19,7 +19,11 @@ type ProjectsProps = {
 
 const Projects: React.FC<ProjectsProps> = ({ isLastCommand = false }) => {
   const { arg, history, rerender } = useContext(termContext);
-  const [emptyProjMessage, setEmptyProjMessage] = useState("");
+  const emptyProjMessage =
+    // Check if arg[1] is equal to a project id with empty url if so set message
+    parseInt(arg[1]) === 2
+      ? "Unfortunately, this project does not have a URL."
+      : "";
   //console.log(isLastCommand)
 
   /* ===== get current command ===== */
@@ -45,21 +49,6 @@ const Projects: React.FC<ProjectsProps> = ({ isLastCommand = false }) => {
       isLastCommand = false;
     };
   }, [currentCommand, rerender, arg, isLastCommand]);
-
-  useEffect(() => {
-    // Set empty project message if project go was executed on an empty url
-    if (arg.length === 2) {
-      projects.forEach(({ id, url }) => {
-        if (id === parseInt(arg[1])) {
-          if (url === "") {
-            setEmptyProjMessage(
-              "Unfortunately, this project does not have a URL."
-            );
-          }
-        }
-      });
-    }
-  }, []);
 
   /* ===== check arg is valid ===== */
   const checkArg = () =>
