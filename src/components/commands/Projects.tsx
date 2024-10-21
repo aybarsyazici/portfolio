@@ -52,7 +52,7 @@ const Projects: React.FC<ProjectsProps> = ({ isLastCommand = false }) => {
 
   /* ===== check arg is valid ===== */
   const checkArg = () =>
-    isArgInvalid(arg, "go", ["1", "2", "3", "4", "5", "6", "7"]) ? (
+    isArgInvalid(arg, "go", ["1", "2", "3", "4", "5", "6", "7", "8"]) ? (
       <Usage cmd="projects" />
     ) : (
       <p>{emptyProjMessage}</p>
@@ -104,22 +104,6 @@ const projects = [
   },
   {
     id: 4,
-    title: "Satellite visualization",
-    desc: "A website that visualizes the satellites orbiting the Earth, done as a project for Data Visualization course at EPFL",
-    url: "https://com-480-data-visualization.github.io/project-2023-astro-vizards/",
-  },
-  {
-    id: 5,
-    title: "Time series student performance prediction",
-    desc: `I along with 2 other team members, worked with data provided by a 
-    start up (lernnavi), to come up with, train and test several 
-    machine learning algorithms to cluster students using the platform into
-    groups and try to predict their performances of week N, using the data available from weeks 1...N-1. Conducted as a course project for
-    ML for behavioral data at EPFL`,
-    url: "https://github.com/ML4BD/final-submission-uclumasa",
-  },
-  {
-    id: 6,
     title: "Brain Fingerprinting via Graph Structure Learning",
     desc: `A project that aims to
     investigate the use of graph structure learning (GSL) methods
@@ -130,7 +114,36 @@ const projects = [
     url: "https://drive.google.com/file/d/1sqEazi1b93ltYfkUFU4iQcDDFkNtxzZX/view?usp=sharing",
   },
   {
+    id: 5,
+    title: "Distributed Information Systems course projects",
+    desc: `Group course projects conducted at EPFL for the Distributed Information Systems course.
+    Of the 3 projects(each one taking 4 weeks), our group achieved #1 ranking for 2 and #2 ranking for one of them.
+    Here are the topics of the 3 projects:
+    Project 1: Text Retrieval & top-k re-ranking
+    Project 2: Recommender systems | Students are expected to develop a recommender system that is able to predict the rating of a user for a given movie.
+    Project 3: Named Entity Disambiguation | Named Entity Disambiguation (NED) is the task of mapping entities, such as persons, locations, or companies, from a given text document to corresponding unique entities in a target Knowledge Base (KB).
+    If you execute 'projects go 5' you will be redirected to a google drive link containing our reports for all 3 projects.`,
+    url: "https://drive.google.com/file/d/1NCrKXT1pjPfRcJ7uT_xZeKkoQaL_oatr/view?usp=sharing",
+  },
+  {
+    id: 6,
+    title: "Satellite visualization",
+    desc: "A website that visualizes the satellites orbiting the Earth, done as a project for Data Visualization course at EPFL",
+    url: "https://com-480-data-visualization.github.io/project-2023-astro-vizards/",
+  },
+  {
     id: 7,
+    title: "Time series student performance prediction",
+    desc: `I along with 2 other team members, worked with data provided by a 
+    start up (lernnavi), to come up with, train and test several 
+    machine learning algorithms to cluster students using the platform into
+    groups and try to predict their performances of week N, using the data available from weeks 1...N-1. Conducted as a course project for
+    ML for behavioral data at EPFL`,
+    url: "https://github.com/ML4BD/final-submission-uclumasa",
+  },
+
+  {
+    id: 8,
     title: "E-commerce website design",
     desc: `As the software team lead, with a group of 7, used agile development, 
     to design and develop an E-Commerce website as a course project. 
