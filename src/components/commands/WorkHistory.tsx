@@ -38,6 +38,19 @@ type workList = {
 
 const workBg: workList[] = [
   {
+    title: "Research Assistant @ ML4ED Lab(EPFL). (03/2025 - Current)",
+    desc: `
+      Research assistantship at ML4ED laboratory at EPFL. Worked on Scholé AI project, supervised
+      student projects. The work also included web development for the dashboard of the application. Utilized ReactJS/
+      Storybook/MantineUI. Supervised project topics:`,
+    list: [
+      "RLHF",
+      "RAG + Adaptive Learning",
+      "Automated Knowledge Graph Extraction",
+    ],
+    ordered: true,
+  },
+  {
     title: "Machine Learning Engineer @ Visium. (02/2024 - 08/2024)",
     desc: `
       Worked as a Junior ML Engineer to create AI models to suit client needs.

@@ -22,7 +22,7 @@ const eduBg = [
   },
   {
     title: "M.Sc in CS @ EPFL",
-    desc: "CGPA | 5.64/6.00 | 2022-Current",
+    desc: "GPA | 5.75/6.00 | 09/2022-02/2025",
   },
 ];
 
