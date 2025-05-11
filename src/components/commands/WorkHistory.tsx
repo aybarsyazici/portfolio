@@ -77,29 +77,39 @@ const workBg: workList[] = [
   },
   {
     title: "Software Developer @ EVET Tech. (12/2021 - 06/2022)",
-    desc: `
-    Worked primarily as a .NET Developer. Utilized ASP.NET framework along with MVC structure to:`,
+    desc: `Worked primarily as a .NET Developer. Where I:`,
     list: [
-      "develop new web pages using JQuery and razor web pages in older projects. And ReactJS in newer projects.",
-      "create, maintain and consume azure functions and deploy new functions apps to the Microsoft Azure portal",
-      "monitored, debugged and optimized an already existing large .NET codebase and MS SQL DB.",
+      "Engineered dynamic web applications using ASP.NET MVC, transitioning frontend development from legacy jQuery/Razor to modern React.js for new features.",
+      "Developed, deployed, and maintained serverless Azure Functions via the Microsoft Azure portal to support critical backend processes and integrations.",
+      "Systematically monitored, diagnosed, and optimized a large-scale .NET application and its MS SQL database, enhancing performance and reliability",
     ],
     ordered: true,
   },
   {
     title: "Web developer @ SPIKY.AI (09/2020 - 11/2022)",
     desc: `
-    Used several frontend and backend frameworks to design and develop admin panels, product websites. (VueJS,
-    NuxtJS, ReactJS, Django Python, Spring Boot Java). 
+    Spearheaded full-stack development for critical company products, encompassing dynamic admin
+    panels and user-facing product websites. Proficiently leveraged a diverse technology stack including
+    frontend frameworks (Vue.js, Nuxt.js, React.js) and backend technologies (Django/Python, Spring
+    Boot/Java). Architected and deployed backend services utilizing cloud platforms (GCP and AWS),
+    incorporating containerization with Docker and orchestration with Kubernetes for scalable and
+    resilient infrastructure. Led the initiative to design, build, and document a comprehensive custom
+    UI component library using Tailwind CSS, Storybook, and SCSS, significantly enhancing UI
+    consistency and accelerating development workflows. Operated effectively within a fast-paced Agile
+    (Scrum/Kanban) environment, contributing to all phases from UI/UX design and requirements
+    gathering to API integration, robust testing, and CI/CD pipeline management for deployments.
     Website URL: https://spiky.ai/
     `,
   },
   {
     title: "Web developer @ VAYSIS ( 06/2021 - 11/2021 )",
     desc: `
-    Worked as an intern to learn and use spring boot Java for the backend and ReactJS with 
-    TypeScript for the frontend to develop dashboards,
-    landing pages and commercial websites. Utilized Nx Project structure.
+    Engineered and delivered high-quality, full-stack web solutions, including interactive dashboards,
+    engaging landing pages, and robust commercial websites. Mastered frontend development with
+    React.js and TypeScript, creating responsive and intuitive user interfaces. Architected and
+    implemented scalable backend systems using Spring Boot (Java). Leveraged Nx monorepo project
+    structure to optimize development workflows, improve code sharing, and ensure maintainability
+    across complex applications.
     `,
   },
   {
