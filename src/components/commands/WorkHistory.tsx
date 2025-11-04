@@ -38,7 +38,21 @@ type workList = {
 
 const workBg: workList[] = [
   {
-    title: "Research Assistant @ ML4ED Lab(EPFL). (03/2025 - Current)",
+    title: "Full Stack Web/AI Engineer @ Cisco. (10/2025 - Current)",
+    desc: `Designing and implementing scalable, full-stack cloud solutions for 
+    next-generation wireless products in a large-scale, multi-cloud environment. 
+    Developing data-driven, customer-centric features by integrating front-end, 
+    cloud-backend, and AI/ML components to enhance the end-to-end user experience.`,
+    list: [
+      "Full-Stack Cloud Engineering (Ruby on Rails & MVC, ReactJS, AWS)",
+      "AI/ML Feature Integration (LLMs/GenAI)",
+      "CI/CD & Automated Testing",
+      "Scalable Wireless Solutions",
+    ],
+    ordered: true,
+  },
+  {
+    title: "Research Assistant @ ML4ED Lab(EPFL). (03/2025 - 09/2025)",
     desc: `
       Research assistantship at ML4ED laboratory at EPFL. Worked on Scholé AI project, supervised
       student projects. The work also included web development for the dashboard of the application. Utilized ReactJS/
